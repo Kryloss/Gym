@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover" />
+  <title>Gym Blocks — Planner</title>
+
+  <!-- iOS borderless / fullscreen -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Gym Blocks">
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+
+  <!-- PWA manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Fullscreen canvas app -->
+  <canvas id="app"></canvas>
+
+  <!-- Hidden inputs for file import/export and image picker (visuals are all on canvas) -->
+  <input id="imagePicker" type="file" accept="image/*" style="position:fixed;left:-9999px;opacity:0" />
+  <input id="jsonImport" type="file" accept="application/json" style="position:fixed;left:-9999px;opacity:0" />
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
