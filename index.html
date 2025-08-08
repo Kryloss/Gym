@@ -2,28 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover" />
-  <title>Gym Blocks — Planner</title>
-
-  <!-- iOS borderless / fullscreen -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no" />
+  <title>Gym Planner</title>
+  <!-- iOS borderless / PWA -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Gym Blocks">
-  <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
-
-  <!-- PWA manifest -->
+  <link rel="apple-touch-icon" href="icon-512.png">
   <link rel="manifest" href="manifest.json">
-
-  <link rel="stylesheet" href="style.css">
+  <style>
+    html, body { margin:0; padding:0; height:100%; background:#000; overscroll-behavior:none; touch-action:none; }
+    canvas { display:block; width:100vw; height:100vh; }
+    /* Hidden inputs for image upload */
+    #uploader { position:fixed; top:-1000px; }
+  </style>
 </head>
 <body>
-  <!-- Fullscreen canvas app -->
-  <canvas id="app"></canvas>
-
-  <!-- Hidden inputs for file import/export and image picker (visuals are all on canvas) -->
-  <input id="imagePicker" type="file" accept="image/*" style="position:fixed;left:-9999px;opacity:0" />
-  <input id="jsonImport" type="file" accept="application/json" style="position:fixed;left:-9999px;opacity:0" />
-
-  <script type="module" src="main.js"></script>
+  <canvas id="c"></canvas>
+  <input id="uploader" type="file" accept="image/*" />
+  <script src="app.js"></script>
 </body>
 </html>
